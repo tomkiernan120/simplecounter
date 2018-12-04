@@ -11,7 +11,6 @@
 				var weeks = 00;
 				var months = 00;
 				var years = 00;
-				var rem;
 				if (x >= 31536000) {
 					var ny = x / 31536000;
 					x = x % 31536000;
@@ -91,7 +90,6 @@
 
 			return this.each(function () {
 				setInterval(function () {
-					var $this = $(this);
 					var cd = new Date();
 					var ed = new Date(o.eventYear, o.eventMonth - 1, o.eventDay, o.eventHour, o.eventMinute, o.eventSecond);
 					var diff = Math.floor(ed.getTime() - cd.getTime());

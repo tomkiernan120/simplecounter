@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/tomkiernan120/simplecounter#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.1"
   }
 }

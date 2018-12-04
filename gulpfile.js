@@ -1,5 +1,8 @@
-var gulp = require("gulp")
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
 
-gulp.addTask( "default", function(){
-    console.log( "hello" );
+gulp.task( "default", function(){
+    gulp.src('src/simplecounter.js')
+        .pipe( uglify() )
+        .pipe(gulp.dest('dist/'));
 })

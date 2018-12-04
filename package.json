@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/tomkiernan120/simplecounter/issues"
   },
-  "homepage": "https://github.com/tomkiernan120/simplecounter#readme"
+  "homepage": "https://github.com/tomkiernan120/simplecounter#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
 }

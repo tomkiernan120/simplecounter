@@ -1,0 +1,27 @@
+{
+  "name": "simplecounter",
+  "version": "1.0.0",
+  "description": "Simple jquery countdown plugin",
+  "main": "simplecounter.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomkiernan120/simplecounter.git"
+  },
+  "keywords": [
+    "Jquery",
+    "plugin",
+    "countdown"
+  ],
+  "author": "Tom Kiernan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomkiernan120/simplecounter/issues"
+  },
+  "homepage": "https://github.com/tomkiernan120/simplecounter#readme"
+}

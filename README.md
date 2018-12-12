@@ -13,7 +13,7 @@ Please make sure you have an up to date copy of jQuery installed.
 ```
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="crossorigin="anonymous"></script> 
 ```
-The code above was grabbed from here [1]https://code.jquery.com/
+The code above was grabbed from here [1]:https://code.jquery.com/
 
 Note I have included the code with cross origin and integrity, this is always recomended for any external resource.
 
@@ -29,17 +29,71 @@ Say what the step will be
   
 ```
 
-And repeat
+And then for the most basic setup load this html and this call this js
 
 ```
-until finished
+//index.html
+
+<div id="countdown">
+	<div id="years"></div>
+	<div id="months"></div>
+	<div id="weeks"></div>
+	<div id="days"></div>
+	<div id="hours"></div>
+	<div id="minutes"></div>
+	<div id="seconds"></div>
+</div>
+
+
+// js.js
+$('#countdown').simplecounter();
+```
+See example here 
+<iframe height='265' scrolling='no' title='Simple Counter Default Example' src='//codepen.io/tommyk/embed/JwYKJV/?height=265&theme-id=0&default-tab=css,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/tommyk/pen/JwYKJV/'>Simple Counter Default Example</a> by Tom Kiernan (<a href='https://codepen.io/tommyk'>@tommyk</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Options 
+You can also specify some options to simplecounter
+
+```
+var defaults = {
+    year: $("#years"),
+	month: $("#months"),
+	weeks: $("#weeks"),
+	days: $("#days"),
+	hours: $("#hours"),
+	minutes: $("#minutes"),
+	seconds: $("#seconds"),
+	eventYear: d.getFullYear() + 1,
+	eventMonth: 6,
+	eventDay: 23,
+	eventHour: 0,
+	eventMinute: 0,
+	eventSecond: 0,
+	complete: function() {}  
+}
+
+$('#countdown').simplecounter(defaults);
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+|Param        | Type           | Default  |
+| ------------- |:-------------:| -----:|
+| year     | jQuery Object | $("#years") |
+| month      | jQuery Object      | $("#months") |
+| weeks      | jQuery Object      | $("#weeks") |
+| days      | jQuery Object      | $("#days") |
+| hours      | jQuery Object      | $("#hours") |
+| minutes      | jQuery Object      | $("#minutes") |
+| seconds      | jQuery Object      | $("#seconds") |
+| eventYear      | jQuery Object      | current year + 1 |
+
+#### Please not the plugin does not generate the HTML and so it is required you correctly markup some contaniers.
+
 
 ## Running the tests
 
-Still to do! Will be instagating some jQuery style Qunit tests
+#### Still to do! 
+Will be instagating some jQuery style Qunit tests
 [1]https://qunitjs.com/
 
 ## Built With
@@ -53,7 +107,7 @@ Still to do! Will be instagating some jQuery style Qunit tests
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
-###Still to instigate!
+#### Still to instigate!
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors

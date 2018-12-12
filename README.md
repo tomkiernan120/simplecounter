@@ -76,19 +76,26 @@ var defaults = {
 $('#countdown').simplecounter(defaults);
 ```
 
-|Param        | Type           | Default  |
-| ------------- |:-------------:| -----:|
-| year     | jQuery Object | $("#years") |
-| month      | jQuery Object      | $("#months") |
-| weeks      | jQuery Object      | $("#weeks") |
-| days      | jQuery Object      | $("#days") |
-| hours      | jQuery Object      | $("#hours") |
-| minutes      | jQuery Object      | $("#minutes") |
-| seconds      | jQuery Object      | $("#seconds") |
-| eventYear      | jQuery Object      | current year + 1 |
+|Param        | Type           | Default  |Required  |
+| ------------- |:-------------:| -----:|-------:|
+| year     | jQuery Object | $("#years") | No|
+| month      | jQuery Object      | $("#months") | No|
+| weeks      | jQuery Object      | $("#weeks") | No|
+| days      | jQuery Object      | $("#days") | No|
+| hours      | jQuery Object      | $("#hours") | No|
+| minutes      | jQuery Object      | $("#minutes") | No|
+| seconds      | jQuery Object      | $("#seconds") | No|
+| eventYear      | interger     | current year + 1 |Yes|
+| eventMonth      | interger      | 6 |Yes|
+| eventDay      | interger     | 23 |Yes|
+| eventHour      | interger     | 0 |Yes|
+| eventMinute      | interger      | 0 |Yes|
+| eventSecond      | interger      | 0 |Yes|
+| complete      | callback function      | empty |No |
+
 
 #### Please not the plugin does not generate the HTML and so it is required you correctly markup some contaniers.
-
+#### Also note by default this is set to the father of computing Alan Turings birthdate each year.
 
 ## Running the tests
 

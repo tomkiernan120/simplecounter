@@ -1,16 +1,17 @@
 ; (function ($) {
 	$.fn.extend({
-		myPlugin: function (options) {
+		simplecounter: function (options) {
+			// console.log( 'init' )
 			var d = new Date();
 			var parseDate = function (ms) {
 				var x = ms / 1000;
-				var seconds = 00;
-				var minutes = 00;
-				var hours = 00;
-				var days = 00;
-				var weeks = 00;
-				var months = 00;
-				var years = 00;
+				var seconds = 0;
+				var minutes = 0;
+				var hours = 0;
+				var days = 0;
+				var weeks = 0;
+				var months = 0;
+				var years = 0;
 				if (x >= 31536000) {
 					var ny = x / 31536000;
 					x = x % 31536000;
@@ -101,7 +102,7 @@
 					var hc = o.hours;
 					var mic = o.minutes;
 					var sc = o.seconds;
-					$(yc, mc, wc, dc, hc, mic, sc).html(00);
+					$(yc, mc, wc, dc, hc, mic, sc).html("00");
 					$(yc).html(ndates.years);
 					$(mc).html(ndates.months);
 					$(wc).html(ndates.weeks);
@@ -119,3 +120,8 @@
 		}
 	});
 })(jQuery);
+
+
+$(document).ready( function() {
+	$('#countdown').simplecounter();
+})

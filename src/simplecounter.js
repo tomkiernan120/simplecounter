@@ -59,7 +59,7 @@
 						seconds++;
 					}
 				}
-				return dates = {
+				return {
 					years: years,
 					months: months,
 					weeks: weeks,
@@ -67,8 +67,8 @@
 					hours: hours,
 					minutes: minutes,
 					seconds: seconds
-				}
-			}
+				};
+			};
 			var defaults = {
 				// define default
 				year: $('#years'),
@@ -120,8 +120,3 @@
 		}
 	});
 })(jQuery);
-
-
-$(document).ready( function() {
-	$('#countdown').simplecounter();
-})

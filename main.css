@@ -1,4 +1,4 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box;position: relative;}
 
 html, body{
     width: 100%;
@@ -27,8 +27,22 @@ html, body{
     color: #fff;
 }
 
-.countdown-container{
+.header h1{
+    font-size: 200%;
+}
+
+.links{
     width: 100%;
+    float: left;
+    height: auto;
+    margin-top: 20px;
+}
+
+.links a{color: #fff;}
+
+.countdown-container{
+    width: 80%;
+    margin: 10px 10%;
     float: left;
     height: auto;
 }
@@ -37,11 +51,41 @@ html, body{
     width: 100%;
     float: left;
     height: auto;
+    margin-left: -1%;
 }
 
-.countdown-container .inner span{
-    display: block;
+.countdown-container .inner div{
     float: left;
-    text-align:center;
-    width: 25%;
+    height: auto;
+    margin-left: 1%;
+    background:#fff;
+    width: 13%;
+    font-size: 200%;
+    color: #000;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 80px;
+    box-shadow:3px 2px 20px 0px rgba(0,0,0,0.4);
 }
+
+.countdown-container .inner div span{
+    background: red;
+    display:block;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    font-size: 120%;
+}
+
+.content, .footer{
+    width: 100%;
+    float: left;
+}
+
+.content .inner{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.footer a{ text-decoration: none; color: #000; }

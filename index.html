@@ -7,8 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple Counter</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css"
+        integrity="sha256-Xd/oN7fJaAoVq6T+MSWamYuXPoDZ1pT8J4UuOUpOQMs=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.css"
+        integrity="sha256-v7Gk8bGD0+jPGzeY7IvCUIGUv4wsPmwcYDWr6jNuvOw=" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-core.min.js" integrity="sha256-JMWUwEEvgEgyM/AKEdVCZ4ZWL/jMP1PeRamXXu0XAUs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js" integrity="sha256-Zb9yKJ/cfs+jG/zIOFL0QEuXr2CDKF7FR5YBJY3No+c="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-http.min.js" integrity="sha256-1n42/z+JxxO2+dm1z7W9cRBZo1lW5UAOICKorDpnHGQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-markup.min.js" integrity="sha256-y7PNRafaFq8DLOp08SPqoMRiRoTWjzMRIFZN6x7AR6k=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-javascript.min.js" integrity="sha256-c+rbyAMS5uc5kNg/9l6huKo8HTw7mgkWmFrcSbEX3TI="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-highlight/prism-line-highlight.min.css"
+        integrity="sha256-Kdfvkip0PWAGssP7m1m6e6eQxe5VaCe9M6oSUqOms+w=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.js"
+        integrity="sha256-8O5mpmzp9VMZFaChudRW3IrIDl0PRtIE7tA9FUJMvVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-highlight/prism-line-highlight.min.js"
+        integrity="sha256-OtrZ5RLf+HvobM+KbiUkBAtOJMSWgtR0fUR0Rw0jDWE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/simplecounter.js"></script>
     <script type="text/javascript" src="js.js"></script>
 </head>
@@ -20,11 +41,54 @@
             <div class="countdown-container">
                 <h2>Time untill the Aniversary of Alan Turing's Birthday</h2>
                 <div class="inner">
-                    <span id="years">00</span> Years <span id="months">00</span> Months <span id="weeks">00</span>
-                    Weeks <span id="days">00</span> Days <span id="hours">00</span> Hours <span id="minutes">00</span>
-                    Minutes <span id="seconds">00</span> Seconds
+                    <div><span id="years">00</span> Years</div>
+                    <div><span id="months">00</span> Months</div>
+                    <div><span id="weeks">00</span> Weeks</div>
+                    <div><span id="days">00</span> Days </div>
+                    <div><span id="hours">00</span> Hours </div>
+                    <div><span id="minutes">00</span> Minutes</div>
+                    <div><span id="seconds">00</span> Seconds</div>
                 </div>
             </div>
+            <div class="links">
+                <a href="https://github.com/tomkiernan120/simplecounter"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+                &nbsp;
+                <a href="dist/simplecounter.js"><i class="fas fa-download fa-3x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="inner">
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>latest version of jQuery</li>
+                </ul>
+                <h2>Example</h2>
+                <pre>
+                    <code class="language-javascript">
+                        $('.countdown-container').simplecounter();
+                    </code>
+                </pre>
+                <pre>
+                    <code class="language-html">
+                        <div class="countdown-container">
+                            <h2>Time untill the Aniversary of Alan Turing's Birthday</h2>
+                            <div class="inner">
+                                <div><span id="years">00</span> Years</div>
+                                <div><span id="months">00</span> Months</div>
+                                <div><span id="weeks">00</span> Weeks</div>
+                                <div><span id="days">00</span> Days </div>
+                                <div><span id="hours">00</span> Hours </div>
+                                <div><span id="minutes">00</span> Minutes</div>
+                                <div><span id="seconds">00</span> Seconds</div>
+                            </div>
+                        </div>
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://github.com/tomkiernan120"><i class="fab fa-github"></i></a>&nbsp;<a href="https://www.tomkiernan.co.uk"><i
+                    class="fas fa-globe"></i></a>&nbsp;<a href="mailto:tkiernan120@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
 </body>

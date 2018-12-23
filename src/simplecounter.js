@@ -1,4 +1,4 @@
-; (function ($) {
+(function ($) {
 	$.fn.extend({
 		simplecounter: function (options) {
 			// console.log( 'init' )

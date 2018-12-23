@@ -25,6 +25,10 @@
   },
   "homepage": "https://github.com/tomkiernan120/simplecounter#readme",
   "dependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.5",
     "gulp-uglify": "^3.0.1"

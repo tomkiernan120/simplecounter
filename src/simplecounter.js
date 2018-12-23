@@ -22,40 +22,40 @@
 				if (x >= 2628000) {
 					var nm = x / 2628000;
 					x = x % 2628000;
-					for (var i = 1; i <= nm; i++) {
+					for (var l = 1; l <= nm; l++) {
 						months++;
 					}
 				}
 				if (x >= 604800) {
 					var nw = x / 604800;
 					x = x % 604800;
-					for (var i = 0; i <= nw; i++) {
+					for (var t = 0; t <= nw; t++) {
 						weeks++;
 					}
 				}
 				if (x >= 86400) {
 					var nd = x / 86400;
 					x = x % 86400;
-					for (var i = 1; i <= nd; i++) {
+					for (var s = 1; s <= nd; s++) {
 						days++;
 					}
 				}
 				if (x >= 3600) {
 					var nh = x / 3600;
 					x = x % 3600;
-					for (var i = 1; i <= nh; i++) {
+					for (var m = 1; m <= nh; m++) {
 						hours++;
 					}
 				}
 				if (x >= 60) {
 					var nmin = x / 60;
 					x = x % 60;
-					for (var i = 1; i <= nmin; i++) {
+					for (var r = 1; r <= nmin; r++) {
 						minutes++;
 					}
 				}
 				if (x > 0) {
-					for (var i = 1; i <= x; i++) {
+					for (var j = 1; j <= x; j++) {
 						seconds++;
 					}
 				}
@@ -86,8 +86,8 @@
 				eventSecond: 0,
 				complete: function () { }
 			},
-				options = $.extend(defaults, options),
-				o = options;	// can call options using "o" instead of "options";
+			newoptions = $.extend(defaults, options),
+			o = newoptions;	// can call options using "o" instead of "options";
 
 			return this.each(function () {
 				setInterval(function () {

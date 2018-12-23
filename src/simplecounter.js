@@ -1,7 +1,6 @@
 ; (function ($) {
 	$.fn.extend({
 		simplecounter: function (options) {
-			// console.log( 'init' )
 			var d = new Date();
 			var parseDate = function (ms) {
 				var x = ms / 1000;

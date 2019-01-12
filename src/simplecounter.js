@@ -93,7 +93,9 @@
 					var cd = new Date();
 					var ed = new Date(o.eventYear, o.eventMonth - 1, o.eventDay, o.eventHour, o.eventMinute, o.eventSecond);
 					var diff = Math.floor(ed.getTime() - cd.getTime());
+					
 					var ndates = parseDate(diff);
+					
 					var yc = o.year;
 					var mc = o.month;
 					var wc = o.weeks;

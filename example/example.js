@@ -1,3 +1,5 @@
 $(function() {
-	$('.countdown-container').myPlugin();
+	$('.countdown-container').simplecounter({
+		eventYear: 2107
+	});
 });

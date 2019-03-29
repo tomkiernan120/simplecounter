@@ -1,7 +1,6 @@
 (function ($) {
 	$.fn.extend({
 		simplecounter: function (options) {
-			// console.log( 'init' )
 			var d = new Date();
 			var parseDate = function (ms) {
 				var x = ms / 1000;
@@ -78,15 +77,17 @@
 				hours: $('#hours'),
 				minutes: $('#minutes'),
 				seconds: $('#seconds'),
-				eventYear: d.getFullYear() + 1,
+				eventYear: (d.getMonth() + 1) > 6 ? d.getFullYear() + 1 : d.getFullYear(),
 				eventMonth: 6,
 				eventDay: 23,
 				eventHour: 0,
 				eventMinute: 0,
 				eventSecond: 0,
-				complete: function () { }
+				complete: function () {
+					
+				}
 			},
-			newoptions = $.extend(defaults, options),
+			newoptions = $.extend( defaults, options ),
 			o = newoptions;	// can call options using "o" instead of "options";
 
 			return this.each(function () {

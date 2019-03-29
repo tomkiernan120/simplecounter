@@ -34,6 +34,6 @@
     "gulp-uglify": "^3.0.1"
   },
   "devDependencies": {
-    "grunt-rewrite": "^1.0.1"
+    "grunt-rewrite": "1.0.1"
   }
 }

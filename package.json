@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "snyk test"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "gulp-uglify": "^3.0.1"
   },
   "devDependencies": {
-    "grunt-rewrite": "1.0.1"
+    "grunt-rewrite": "1.0.1",
+    "snyk": "^1.187.1"
   }
 }

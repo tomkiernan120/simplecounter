@@ -6,4 +6,22 @@ ignore:
     - grunt-contrib-jshint > jshint > shelljs:
         reason: '0'
         expires: '2019-08-01T13:27:30.522Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - grunt-contrib-watch > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - gulp-uglify > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt-contrib-jshint > jshint > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt-contrib-watch > async > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2019-07-04T04:48:15.309Z'
+    - grunt-contrib-watch > gaze > globule > lodash:
+        patched: '2019-07-04T04:48:15.309Z'

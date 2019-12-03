@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:shelljs:20140723':
@@ -25,3 +25,28 @@ patch:
         patched: '2019-07-04T04:48:15.309Z'
     - grunt-contrib-watch > gaze > globule > lodash:
         patched: '2019-07-04T04:48:15.309Z'
+    - snyk > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-12-03T11:27:12.220Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-12-03T11:27:12.220Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-12-03T11:27:12.220Z'

@@ -50,3 +50,6 @@ patch:
         patched: '2019-12-03T11:27:12.220Z'
     - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
         patched: '2019-12-03T11:27:12.220Z'
+  SNYK-JS-TREEKILL-536781:
+    - snyk > snyk-sbt-plugin > tree-kill:
+        patched: '2019-12-12T04:48:33.611Z'

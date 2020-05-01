@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.14.0
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:shelljs:20140723':
@@ -50,3 +50,42 @@ patch:
         patched: '2019-12-03T11:27:12.220Z'
     - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
         patched: '2019-12-03T11:27:12.220Z'
+  SNYK-JS-LODASH-567746:
+    - grunt-contrib-watch > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - gulp-uglify > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt-contrib-jshint > jshint > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt-contrib-watch > async > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - grunt-contrib-watch > gaze > globule > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-01T04:49:32.863Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-01T04:49:32.863Z'

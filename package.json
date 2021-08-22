@@ -34,7 +34,7 @@
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.5",
     "gulp-uglify": "^3.0.1",
-    "snyk": "^1.254.0"
+    "snyk": "^1.230.7"
   },
   "devDependencies": {
     "grunt-rewrite": "1.0.1"

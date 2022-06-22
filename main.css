@@ -22,10 +22,11 @@ html, body{
     width:100%;
     float: left;
     height: auto;
-    background: #e80f0f;
+    background: #e73d3d;
     padding: 40px 0 60px;
     color: #fff;
     padding-top: 120px;
+    clip-path: polygon(0 1%, 100% 0, 100% 92%, 0% 100%);
 }
 
 .header h1{

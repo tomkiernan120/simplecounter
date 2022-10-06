@@ -35,7 +35,7 @@
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.9",
     "gulp-uglify": "^3.0.1",
-    "snyk": "^1.685.0",
+    "snyk": "^1.996.0",
     "grunt-rewrite": "1.0.1"
   },
   "snyk": true

@@ -1,4 +1,5 @@
 const secondsInYear = 31536000;
+const secondsInMonth = 2628000;
 
 (function ($) {
   $.fn.extend({
@@ -20,9 +21,9 @@ const secondsInYear = 31536000;
             years++;
           }
         }
-        if (x >= 2628000) {
-          var nm = x / 2628000;
-          x = x % 2628000;
+        if (x >= secondsInMonth) {
+          var nm = x / secondsInMonth;
+          x = x % secondsInMonth;
           for (var l = 1; l <= nm; l++) {
             months++;
           }

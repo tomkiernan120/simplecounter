@@ -82,4 +82,18 @@ typings/
 #DynamoDB Local files
 .dynamodb/
 
+# Editor files
+/.idea
+/.vscode
+/.vs
+*.iml
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
 # End of https://www.gitignore.io/api/node

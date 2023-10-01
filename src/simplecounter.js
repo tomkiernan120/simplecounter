@@ -1,3 +1,5 @@
+const secondsInYear = 31536000;
+
 (function ($) {
   $.fn.extend({
     simplecounter: function (options) {
@@ -11,9 +13,9 @@
         var weeks = 0;
         var months = 0;
         var years = 0;
-        if (x >= 31536000) {
-          var ny = x / 31536000;
-          x = x % 31536000;
+        if (x >= secondsInYear) {
+          var ny = x / secondsInYear;
+          x = x % secondsInYear;
           for (var i = 1; i <= ny; i++) {
             years++;
           }

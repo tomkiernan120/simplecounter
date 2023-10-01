@@ -2,6 +2,7 @@ const secondsInYear = 31536000;
 const secondsInMonth = 2628000;
 const secondsInWeek = 604800;
 const secondsInDay = 86400;
+const secondsInHour = 3600;
 
 (function ($) {
   $.fn.extend({
@@ -44,9 +45,9 @@ const secondsInDay = 86400;
             days++;
           }
         }
-        if (x >= 3600) {
-          var nh = x / 3600;
-          x = x % 3600;
+        if (x >= secondsInHour) {
+          var nh = x / secondsInHour;
+          x = x % secondsInHour;
           for (var m = 1; m <= nh; m++) {
             hours++;
           }

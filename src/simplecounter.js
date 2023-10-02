@@ -76,7 +76,6 @@ const secondsInMinute = 60;
         };
       };
       let defaults = {
-          // define default
           countUp: false,
           year: $("#years"),
           month: $("#months"),
@@ -85,8 +84,7 @@ const secondsInMinute = 60;
           hours: $("#hours"),
           minutes: $("#minutes"),
           seconds: $("#seconds"),
-          eventYear:
-            dateToday.getMonth() + 1 > 6 ? dateToday.getFullYear() + 1 : dateToday.getFullYear(),
+          eventYear: dateToday.getMonth() + 1 > 6 ? dateToday.getFullYear() + 1 : dateToday.getFullYear(),
           eventMonth: 6,
           eventDay: 23,
           eventHour: 0,
@@ -130,10 +128,8 @@ const secondsInMinute = 60;
           $(secondCount).html(ndates.seconds);
         }, 1000);
 
-        // Callback
         if ($.isFunction(o.complete)) {
-          // check that the callback is a function
-          o.complete.call(this); // apply scope to the callback function
+          o.complete.call(this);
         }
       });
     },

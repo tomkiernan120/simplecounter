@@ -11,12 +11,6 @@ const secondsInMinute = 60;
       let dateToday = new Date();
       let parseDate = ms => {
         let x = ms / 1000;
-        let seconds = 0;
-        let minutes = 0;
-        let hours = 0;
-        let days = 0;
-        let weeks = 0;
-        let months = 0;
         let years = 0;
         if (x >= secondsInYear) {
           let ny = x / secondsInYear;
@@ -25,6 +19,7 @@ const secondsInMinute = 60;
             years++;
           }
         }
+        let months = 0;
         if (x >= secondsInMonth) {
           let nm = x / secondsInMonth;
           x = x % secondsInMonth;
@@ -32,6 +27,7 @@ const secondsInMinute = 60;
             months++;
           }
         }
+        let weeks = 0;
         if (x >= secondsInWeek) {
           let nw = x / secondsInWeek;
           x = x % secondsInWeek;
@@ -39,6 +35,7 @@ const secondsInMinute = 60;
             weeks++;
           }
         }
+        let days = 0;
         if (x >= secondsInDay) {
           let nd = x / secondsInDay;
           x = x % secondsInDay;
@@ -46,6 +43,7 @@ const secondsInMinute = 60;
             days++;
           }
         }
+        let hours = 0;
         if (x >= secondsInHour) {
           let nh = x / secondsInHour;
           x = x % secondsInHour;
@@ -53,6 +51,7 @@ const secondsInMinute = 60;
             hours++;
           }
         }
+        let minutes = 0;
         if (x >= secondsInMinute) {
           let nmin = x / secondsInMinute;
           x = x % secondsInMinute;
@@ -60,6 +59,7 @@ const secondsInMinute = 60;
             minutes++;
           }
         }
+        let seconds = 0;
         if (x > 0) {
           for (let j = 1; j <= x; j++) {
             seconds++;

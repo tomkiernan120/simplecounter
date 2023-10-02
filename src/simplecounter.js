@@ -113,21 +113,21 @@ const secondsInMinute = 60;
             diff = Math.floor(cd.getTime() - ed.getTime());
           }
           let ndates = parseDate(diff);
-          let yc = o.year;
-          let mc = o.month;
-          let wc = o.weeks;
-          let dc = o.days;
-          let hc = o.hours;
-          let mic = o.minutes;
-          let sc = o.seconds;
-          $(yc, mc, wc, dc, hc, mic, sc).html("00");
-          $(yc).html(ndates.years);
-          $(mc).html(ndates.months);
-          $(wc).html(ndates.weeks);
-          $(dc).html(ndates.days);
-          $(hc).html(ndates.hours);
-          $(mic).html(ndates.minutes);
-          $(sc).html(ndates.seconds);
+          let yearCount = o.year;
+          let monthCount = o.month;
+          let weekCount = o.weeks;
+          let dayCount = o.days;
+          let hourCount = o.hours;
+          let minuteCount = o.minutes;
+          let secondCount = o.seconds;
+          $(yearCount, monthCount, weekCount, dayCount, hourCount, minuteCount, secondCount).html("00");
+          $(yearCount).html(ndates.years);
+          $(monthCount).html(ndates.months);
+          $(weekCount).html(ndates.weeks);
+          $(dayCount).html(ndates.days);
+          $(hourCount).html(ndates.hours);
+          $(minuteCount).html(ndates.minutes);
+          $(secondCount).html(ndates.seconds);
         }, 1000);
 
         // Callback

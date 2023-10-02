@@ -11,40 +11,19 @@ const secondsInMinute = 60;
             let dateToday = new Date();
             let parseDate = ms => {
                 let remainingSeconds = ms / 1000;
-                let years = 0;
-                if (remainingSeconds >= secondsInYear) {
-                    years = remainingSeconds / secondsInYear;
-                    remainingSeconds = remainingSeconds % secondsInYear;
-                }
-                let months = 0;
-                if (remainingSeconds >= secondsInMonth) {
-                    months = remainingSeconds / secondsInMonth;
-                    remainingSeconds = remainingSeconds % secondsInMonth;
-                }
-                let weeks = 0;
-                if (remainingSeconds >= secondsInWeek) {
-                    weeks = remainingSeconds / secondsInWeek;
-                    remainingSeconds = remainingSeconds % secondsInWeek;
-                }
-                let days = 0;
-                if (remainingSeconds >= secondsInDay) {
-                    days = remainingSeconds / secondsInDay;
-                    remainingSeconds = remainingSeconds % secondsInDay;
-                }
-                let hours = 0;
-                if (remainingSeconds >= secondsInHour) {
-                    hours = remainingSeconds / secondsInHour;
-                    remainingSeconds = remainingSeconds % secondsInHour;
-                }
-                let minutes = 0;
-                if (remainingSeconds >= secondsInMinute) {
-                    minutes = remainingSeconds / secondsInMinute;
-                    remainingSeconds = remainingSeconds % secondsInMinute;
-                }
-                let seconds = 0;
-                if (remainingSeconds > 0) {
-                    seconds = remainingSeconds;
-                }
+                const years = (remainingSeconds >= secondsInYear) ? remainingSeconds / secondsInYear : 0;
+                remainingSeconds = (remainingSeconds >= secondsInYear) ? remainingSeconds % secondsInYear : remainingSeconds;
+                const months = (remainingSeconds >= secondsInMonth) ? remainingSeconds / secondsInMonth : 0;
+                remainingSeconds = (remainingSeconds >= secondsInMonth) ? remainingSeconds % secondsInMonth : remainingSeconds;
+                const weeks = (remainingSeconds >= secondsInWeek) ? remainingSeconds / secondsInWeek : 0;
+                remainingSeconds = (remainingSeconds >= secondsInWeek) ? remainingSeconds % secondsInWeek : 0
+                const days = (remainingSeconds >= secondsInDay) ? remainingSeconds / secondsInDay : 0;
+                remainingSeconds = (remainingSeconds >= secondsInDay) ? remainingSeconds % secondsInDay : 0
+                const hours = (remainingSeconds >= secondsInHour) ? remainingSeconds / secondsInHour : 0;
+                remainingSeconds = (remainingSeconds >= secondsInHour) ? remainingSeconds % secondsInHour : 0
+                const minutes = (remainingSeconds >= secondsInMinute) ? remainingSeconds / secondsInMinute : 0;
+                remainingSeconds = (remainingSeconds >= secondsInMinute) ? remainingSeconds % secondsInMinute : 0
+                const seconds = (remainingSeconds > 0) ? remainingSeconds : 0;
                 return {
                     years: years,
                     months: months,

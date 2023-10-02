@@ -10,58 +10,58 @@ const secondsInMinute = 60;
         simplecounter: options => {
             let dateToday = new Date();
             let parseDate = ms => {
-                let x = ms / 1000;
+                let remainingSeconds = ms / 1000;
                 let years = 0;
-                if (x >= secondsInYear) {
-                    let ny = x / secondsInYear;
-                    x = x % secondsInYear;
+                if (remainingSeconds >= secondsInYear) {
+                    let ny = remainingSeconds / secondsInYear;
+                    remainingSeconds = remainingSeconds % secondsInYear;
                     for (let i = 1; i <= ny; i++) {
                         years++;
                     }
                 }
                 let months = 0;
-                if (x >= secondsInMonth) {
-                    let nm = x / secondsInMonth;
-                    x = x % secondsInMonth;
+                if (remainingSeconds >= secondsInMonth) {
+                    let nm = remainingSeconds / secondsInMonth;
+                    remainingSeconds = remainingSeconds % secondsInMonth;
                     for (let l = 1; l <= nm; l++) {
                         months++;
                     }
                 }
                 let weeks = 0;
-                if (x >= secondsInWeek) {
-                    let nw = x / secondsInWeek;
-                    x = x % secondsInWeek;
+                if (remainingSeconds >= secondsInWeek) {
+                    let nw = remainingSeconds / secondsInWeek;
+                    remainingSeconds = remainingSeconds % secondsInWeek;
                     for (let t = 0; t <= nw; t++) {
                         weeks++;
                     }
                 }
                 let days = 0;
-                if (x >= secondsInDay) {
-                    let nd = x / secondsInDay;
-                    x = x % secondsInDay;
+                if (remainingSeconds >= secondsInDay) {
+                    let nd = remainingSeconds / secondsInDay;
+                    remainingSeconds = remainingSeconds % secondsInDay;
                     for (let s = 1; s <= nd; s++) {
                         days++;
                     }
                 }
                 let hours = 0;
-                if (x >= secondsInHour) {
-                    let nh = x / secondsInHour;
-                    x = x % secondsInHour;
+                if (remainingSeconds >= secondsInHour) {
+                    let nh = remainingSeconds / secondsInHour;
+                    remainingSeconds = remainingSeconds % secondsInHour;
                     for (let m = 1; m <= nh; m++) {
                         hours++;
                     }
                 }
                 let minutes = 0;
-                if (x >= secondsInMinute) {
-                    let nmin = x / secondsInMinute;
-                    x = x % secondsInMinute;
+                if (remainingSeconds >= secondsInMinute) {
+                    let nmin = remainingSeconds / secondsInMinute;
+                    remainingSeconds = remainingSeconds % secondsInMinute;
                     for (let r = 1; r <= nmin; r++) {
                         minutes++;
                     }
                 }
                 let seconds = 0;
-                if (x > 0) {
-                    for (let j = 1; j <= x; j++) {
+                if (remainingSeconds > 0) {
+                    for (let j = 1; j <= remainingSeconds; j++) {
                         seconds++;
                     }
                 }

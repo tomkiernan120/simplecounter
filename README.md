@@ -8,14 +8,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Please make sure you have an up to date copy of jQuery installed.
+Please make sure you have an up-to-date copy of jQuery installed.
 
 ```
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="crossorigin="anonymous"></script> 
 ```
 The code above was grabbed from here [1]:https://code.jquery.com/
 
-Note I have included the code with cross origin and integrity, this is always recomended for any external resource.
+Note I have included the code with cross-origin and integrity, this is always recommended for any external resource.
 
 ### Installing
 
@@ -85,27 +85,27 @@ $('#countdown').simplecounter(defaults);
 | hours      | jQuery Object      | $("#hours") | No|
 | minutes      | jQuery Object      | $("#minutes") | No|
 | seconds      | jQuery Object      | $("#seconds") | No|
-| eventYear      | interger     | current year + 1 |Yes|
-| eventMonth      | interger      | 6 |Yes|
-| eventDay      | interger     | 23 |Yes|
-| eventHour      | interger     | 0 |Yes|
-| eventMinute      | interger      | 0 |Yes|
-| eventSecond      | interger      | 0 |Yes|
+| eventYear      | integer     | current year + 1 |Yes|
+| eventMonth      | integer      | 6 |Yes|
+| eventDay      | integer     | 23 |Yes|
+| eventHour      | integer     | 0 |Yes|
+| eventMinute      | integer      | 0 |Yes|
+| eventSecond      | integer      | 0 |Yes|
 | complete      | callback function      | empty |No |
 
 
-#### Please not the plugin does not generate the HTML and so it is required you correctly markup some contaniers.
-#### Also note by default this is set to the father of computing Alan Turings birthdate each year.
+#### Please not the plugin does not generate the HTML and so it is required you correctly markup some containers.
+#### Also note by default this is set to the father of computing Alan Turing's birthdate each year.
 
 ## Running the tests
 
 #### Still to do! 
-Will be instagating some jQuery style Qunit tests
+Will be instigating some jQuery style Qunit tests
 [1]https://qunitjs.com/
 
 ## Built With
 
-* [Boilerplate](https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js) - The intial template used
+* [Boilerplate](https://github.com/jquery-boilerplate/jquery-patterns/blob/master/patterns/jquery.basic.plugin-boilerplate.js) - The initial template used
 * [NPM](https://www.npmjs.com/) - Dependency Management
 * [GRUNT](https://gruntjs.com/) - Build tool
 

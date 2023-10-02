@@ -1,134 +1,94 @@
-(function ($) {
-  $.fn.extend({
-    simplecounter: function (options) {
-      var d = new Date();
-      var parseDate = function (ms) {
-        var x = ms / 1000;
-        var seconds = 0;
-        var minutes = 0;
-        var hours = 0;
-        var days = 0;
-        var weeks = 0;
-        var months = 0;
-        var years = 0;
-        if (x >= 31536000) {
-          var ny = x / 31536000;
-          x = x % 31536000;
-          for (var i = 1; i <= ny; i++) {
-            years++;
-          }
-        }
-        if (x >= 2628000) {
-          var nm = x / 2628000;
-          x = x % 2628000;
-          for (var l = 1; l <= nm; l++) {
-            months++;
-          }
-        }
-        if (x >= 604800) {
-          var nw = x / 604800;
-          x = x % 604800;
-          for (var t = 0; t <= nw; t++) {
-            weeks++;
-          }
-        }
-        if (x >= 86400) {
-          var nd = x / 86400;
-          x = x % 86400;
-          for (var s = 1; s <= nd; s++) {
-            days++;
-          }
-        }
-        if (x >= 3600) {
-          var nh = x / 3600;
-          x = x % 3600;
-          for (var m = 1; m <= nh; m++) {
-            hours++;
-          }
-        }
-        if (x >= 60) {
-          var nmin = x / 60;
-          x = x % 60;
-          for (var r = 1; r <= nmin; r++) {
-            minutes++;
-          }
-        }
-        if (x > 0) {
-          for (var j = 1; j <= x; j++) {
-            seconds++;
-          }
-        }
-        return {
-          years: years,
-          months: months,
-          weeks: weeks,
-          days: days,
-          hours: hours,
-          minutes: minutes,
-          seconds: seconds,
-        };
-      };
-      var defaults = {
-          // define default
-          countUp: false,
-          year: $("#years"),
-          month: $("#months"),
-          weeks: $("#weeks"),
-          days: $("#days"),
-          hours: $("#hours"),
-          minutes: $("#minutes"),
-          seconds: $("#seconds"),
-          eventYear:
-            d.getMonth() + 1 > 6 ? d.getFullYear() + 1 : d.getFullYear(),
-          eventMonth: 6,
-          eventDay: 23,
-          eventHour: 0,
-          eventMinute: 0,
-          eventSecond: 0,
-          complete: function () {},
-        },
-        newoptions = $.extend(defaults, options),
-        o = newoptions; // can call options using "o" instead of "options";
+const secondsInYear = 31536000;
+const secondsInMonth = 2628000;
+const secondsInWeek = 604800;
+const secondsInDay = 86400;
+const secondsInHour = 3600;
+const secondsInMinute = 60;
 
-      return this.each(function () {
-        setInterval(function () {
-          var cd = new Date();
-          var ed = new Date(
-            o.eventYear,
-            o.eventMonth - 1,
-            o.eventDay,
-            o.eventHour,
-            o.eventMinute,
-            o.eventSecond
-          );
-          var diff = Math.floor(ed.getTime() - cd.getTime());
-          if (o.countUp) {
-            diff = Math.floor(cd.getTime() - ed.getTime());
-          }
-          var ndates = parseDate(diff);
-          var yc = o.year;
-          var mc = o.month;
-          var wc = o.weeks;
-          var dc = o.days;
-          var hc = o.hours;
-          var mic = o.minutes;
-          var sc = o.seconds;
-          $(yc, mc, wc, dc, hc, mic, sc).html("00");
-          $(yc).html(ndates.years);
-          $(mc).html(ndates.months);
-          $(wc).html(ndates.weeks);
-          $(dc).html(ndates.days);
-          $(hc).html(ndates.hours);
-          $(mic).html(ndates.minutes);
-          $(sc).html(ndates.seconds);
-        }, 1000);
+($ => {
+    $.fn.extend({
+        simplecounter: options => {
+            let dateToday = new Date();
+            let parseDate = milliseconds => {
+                let remainingSeconds = milliseconds / 1000;
+                const years = (remainingSeconds >= secondsInYear) ? remainingSeconds / secondsInYear : 0;
+                remainingSeconds = (remainingSeconds >= secondsInYear) ? remainingSeconds % secondsInYear : remainingSeconds;
+                const months = (remainingSeconds >= secondsInMonth) ? remainingSeconds / secondsInMonth : 0;
+                remainingSeconds = (remainingSeconds >= secondsInMonth) ? remainingSeconds % secondsInMonth : remainingSeconds;
+                const weeks = (remainingSeconds >= secondsInWeek) ? remainingSeconds / secondsInWeek : 0;
+                remainingSeconds = (remainingSeconds >= secondsInWeek) ? remainingSeconds % secondsInWeek : 0
+                const days = (remainingSeconds >= secondsInDay) ? remainingSeconds / secondsInDay : 0;
+                remainingSeconds = (remainingSeconds >= secondsInDay) ? remainingSeconds % secondsInDay : 0
+                const hours = (remainingSeconds >= secondsInHour) ? remainingSeconds / secondsInHour : 0;
+                remainingSeconds = (remainingSeconds >= secondsInHour) ? remainingSeconds % secondsInHour : 0
+                const minutes = (remainingSeconds >= secondsInMinute) ? remainingSeconds / secondsInMinute : 0;
+                remainingSeconds = (remainingSeconds >= secondsInMinute) ? remainingSeconds % secondsInMinute : 0
+                const seconds = (remainingSeconds > 0) ? remainingSeconds : 0;
+                return {
+                    years: years,
+                    months: months,
+                    weeks: weeks,
+                    days: days,
+                    hours: hours,
+                    minutes: minutes,
+                    seconds: seconds,
+                };
+            };
+            let defaults = {
+                countUp: false,
+                year: $("#years"),
+                month: $("#months"),
+                weeks: $("#weeks"),
+                days: $("#days"),
+                hours: $("#hours"),
+                minutes: $("#minutes"),
+                seconds: $("#seconds"),
+                eventYear: dateToday.getMonth() + 1 > 6 ? dateToday.getFullYear() + 1 : dateToday.getFullYear(),
+                eventMonth: 6,
+                eventDay: 23,
+                eventHour: 0,
+                eventMinute: 0,
+                eventSecond: 0,
+                complete: () => {},
+            };
+            const newOptions = $.extend(defaults, options);
 
-        // Callback
-        if ($.isFunction(o.complete)) {
-          // check that the callback is a function
-          o.complete.call(this); // apply scope to the callback function
+            return this.each(() => {
+                setInterval(() => {
+                    let cd = new Date();
+                    let ed = new Date(
+                        newOptions.eventYear,
+                        newOptions.eventMonth - 1, newOptions.eventDay,
+                        newOptions.eventHour,
+                        newOptions.eventMinute,
+                        newOptions.eventSecond
+                    );
+                    let diff = Math.floor(ed.getTime() - cd.getTime());
+                    if (newOptions.countUp) {
+                        diff = Math.floor(cd.getTime() - ed.getTime());
+                    }
+                    let ndates = parseDate(diff);
+                    let yearCount = newOptions.year;
+                    let monthCount = newOptions.month;
+                    let weekCount = newOptions.weeks;
+                    let dayCount = newOptions.days;
+                    let hourCount = newOptions.hours;
+                    let minuteCount = newOptions.minutes;
+                    let secondCount = newOptions.seconds;
+                    $(yearCount, monthCount, weekCount, dayCount, hourCount, minuteCount, secondCount).html("00");
+                    $(yearCount).html(ndates.years);
+                    $(monthCount).html(ndates.months);
+                    $(weekCount).html(ndates.weeks);
+                    $(dayCount).html(ndates.days);
+                    $(hourCount).html(ndates.hours);
+                    $(minuteCount).html(ndates.minutes);
+                    $(secondCount).html(ndates.seconds);
+                    }, 1000);
+
+                if ($.isFunction(newOptions.complete)) {
+                    newOptions.complete.call(this);
+                }
+            });
         }
-      });
-    },
-  });
+    });
 })(jQuery);

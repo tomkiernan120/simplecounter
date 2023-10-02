@@ -8,60 +8,60 @@ const secondsInMinute = 60;
 (function ($) {
   $.fn.extend({
     simplecounter: function (options) {
-      var d = new Date();
-      var parseDate = function (ms) {
-        var x = ms / 1000;
-        var seconds = 0;
-        var minutes = 0;
-        var hours = 0;
-        var days = 0;
-        var weeks = 0;
-        var months = 0;
-        var years = 0;
+      let d = new Date();
+      let parseDate = function (ms) {
+        let x = ms / 1000;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+        let days = 0;
+        let weeks = 0;
+        let months = 0;
+        let years = 0;
         if (x >= secondsInYear) {
-          var ny = x / secondsInYear;
+          let ny = x / secondsInYear;
           x = x % secondsInYear;
-          for (var i = 1; i <= ny; i++) {
+          for (let i = 1; i <= ny; i++) {
             years++;
           }
         }
         if (x >= secondsInMonth) {
-          var nm = x / secondsInMonth;
+          let nm = x / secondsInMonth;
           x = x % secondsInMonth;
-          for (var l = 1; l <= nm; l++) {
+          for (let l = 1; l <= nm; l++) {
             months++;
           }
         }
         if (x >= secondsInWeek) {
-          var nw = x / secondsInWeek;
+          let nw = x / secondsInWeek;
           x = x % secondsInWeek;
-          for (var t = 0; t <= nw; t++) {
+          for (let t = 0; t <= nw; t++) {
             weeks++;
           }
         }
         if (x >= secondsInDay) {
-          var nd = x / secondsInDay;
+          let nd = x / secondsInDay;
           x = x % secondsInDay;
-          for (var s = 1; s <= nd; s++) {
+          for (let s = 1; s <= nd; s++) {
             days++;
           }
         }
         if (x >= secondsInHour) {
-          var nh = x / secondsInHour;
+          let nh = x / secondsInHour;
           x = x % secondsInHour;
-          for (var m = 1; m <= nh; m++) {
+          for (let m = 1; m <= nh; m++) {
             hours++;
           }
         }
         if (x >= secondsInMinute) {
-          var nmin = x / secondsInMinute;
+          let nmin = x / secondsInMinute;
           x = x % secondsInMinute;
-          for (var r = 1; r <= nmin; r++) {
+          for (let r = 1; r <= nmin; r++) {
             minutes++;
           }
         }
         if (x > 0) {
-          for (var j = 1; j <= x; j++) {
+          for (let j = 1; j <= x; j++) {
             seconds++;
           }
         }
@@ -75,7 +75,7 @@ const secondsInMinute = 60;
           seconds: seconds,
         };
       };
-      var defaults = {
+      let defaults = {
           // define default
           countUp: false,
           year: $("#years"),
@@ -99,8 +99,8 @@ const secondsInMinute = 60;
 
       return this.each(function () {
         setInterval(function () {
-          var cd = new Date();
-          var ed = new Date(
+          let cd = new Date();
+          let ed = new Date(
             o.eventYear,
             o.eventMonth - 1,
             o.eventDay,
@@ -108,18 +108,18 @@ const secondsInMinute = 60;
             o.eventMinute,
             o.eventSecond
           );
-          var diff = Math.floor(ed.getTime() - cd.getTime());
+          let diff = Math.floor(ed.getTime() - cd.getTime());
           if (o.countUp) {
             diff = Math.floor(cd.getTime() - ed.getTime());
           }
-          var ndates = parseDate(diff);
-          var yc = o.year;
-          var mc = o.month;
-          var wc = o.weeks;
-          var dc = o.days;
-          var hc = o.hours;
-          var mic = o.minutes;
-          var sc = o.seconds;
+          let ndates = parseDate(diff);
+          let yc = o.year;
+          let mc = o.month;
+          let wc = o.weeks;
+          let dc = o.days;
+          let hc = o.hours;
+          let mic = o.minutes;
+          let sc = o.seconds;
           $(yc, mc, wc, dc, hc, mic, sc).html("00");
           $(yc).html(ndates.years);
           $(mc).html(ndates.months);

@@ -8,7 +8,7 @@ const secondsInMinute = 60;
 (function ($) {
   $.fn.extend({
     simplecounter: function (options) {
-      let d = new Date();
+      let dateToday = new Date();
       let parseDate = function (ms) {
         let x = ms / 1000;
         let seconds = 0;
@@ -86,7 +86,7 @@ const secondsInMinute = 60;
           minutes: $("#minutes"),
           seconds: $("#seconds"),
           eventYear:
-            d.getMonth() + 1 > 6 ? d.getFullYear() + 1 : d.getFullYear(),
+            dateToday.getMonth() + 1 > 6 ? dateToday.getFullYear() + 1 : dateToday.getFullYear(),
           eventMonth: 6,
           eventDay: 23,
           eventHour: 0,

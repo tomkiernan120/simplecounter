@@ -91,33 +91,32 @@ const secondsInMinute = 60;
           eventMinute: 0,
           eventSecond: 0,
           complete: () => {},
-        },
-        newoptions = $.extend(defaults, options),
-        o = newoptions; // can call options using "o" instead of "options";
+        };
+        const newOptions = $.extend(defaults, options);
 
       return this.each(() => {
         setInterval(() => {
           let cd = new Date();
           let ed = new Date(
-            o.eventYear,
-            o.eventMonth - 1,
-            o.eventDay,
-            o.eventHour,
-            o.eventMinute,
-            o.eventSecond
+            newOptions.eventYear,
+            newOptions.eventMonth - 1,
+            newOptions.eventDay,
+            newOptions.eventHour,
+            newOptions.eventMinute,
+            newOptions.eventSecond
           );
           let diff = Math.floor(ed.getTime() - cd.getTime());
-          if (o.countUp) {
+          if (newOptions.countUp) {
             diff = Math.floor(cd.getTime() - ed.getTime());
           }
           let ndates = parseDate(diff);
-          let yearCount = o.year;
-          let monthCount = o.month;
-          let weekCount = o.weeks;
-          let dayCount = o.days;
-          let hourCount = o.hours;
-          let minuteCount = o.minutes;
-          let secondCount = o.seconds;
+          let yearCount = newOptions.year;
+          let monthCount = newOptions.month;
+          let weekCount = newOptions.weeks;
+          let dayCount = newOptions.days;
+          let hourCount = newOptions.hours;
+          let minuteCount = newOptions.minutes;
+          let secondCount = newOptions.seconds;
           $(yearCount, monthCount, weekCount, dayCount, hourCount, minuteCount, secondCount).html("00");
           $(yearCount).html(ndates.years);
           $(monthCount).html(ndates.months);
@@ -128,10 +127,10 @@ const secondsInMinute = 60;
           $(secondCount).html(ndates.seconds);
         }, 1000);
 
-        if ($.isFunction(o.complete)) {
-          o.complete.call(this);
+        if ($.isFunction(newOptions.complete)) {
+          newOptions.complete.call(this);
         }
       });
-    },
+    }
   });
 })(jQuery);

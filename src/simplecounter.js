@@ -13,49 +13,49 @@ const secondsInMinute = 60;
                 let remainingSeconds = ms / 1000;
                 let years = 0;
                 if (remainingSeconds >= secondsInYear) {
-                    let ny = remainingSeconds / secondsInYear;
+                    let newYears = remainingSeconds / secondsInYear;
                     remainingSeconds = remainingSeconds % secondsInYear;
-                    for (let i = 1; i <= ny; i++) {
+                    for (let i = 1; i <= newYears; i++) {
                         years++;
                     }
                 }
                 let months = 0;
                 if (remainingSeconds >= secondsInMonth) {
-                    let nm = remainingSeconds / secondsInMonth;
+                    let newMonths = remainingSeconds / secondsInMonth;
                     remainingSeconds = remainingSeconds % secondsInMonth;
-                    for (let l = 1; l <= nm; l++) {
+                    for (let l = 1; l <= newMonths; l++) {
                         months++;
                     }
                 }
                 let weeks = 0;
                 if (remainingSeconds >= secondsInWeek) {
-                    let nw = remainingSeconds / secondsInWeek;
+                    let newWeeks = remainingSeconds / secondsInWeek;
                     remainingSeconds = remainingSeconds % secondsInWeek;
-                    for (let t = 0; t <= nw; t++) {
+                    for (let t = 0; t <= newWeeks; t++) {
                         weeks++;
                     }
                 }
                 let days = 0;
                 if (remainingSeconds >= secondsInDay) {
-                    let nd = remainingSeconds / secondsInDay;
+                    let newDays = remainingSeconds / secondsInDay;
                     remainingSeconds = remainingSeconds % secondsInDay;
-                    for (let s = 1; s <= nd; s++) {
+                    for (let s = 1; s <= newDays; s++) {
                         days++;
                     }
                 }
                 let hours = 0;
                 if (remainingSeconds >= secondsInHour) {
-                    let nh = remainingSeconds / secondsInHour;
+                    let newHours = remainingSeconds / secondsInHour;
                     remainingSeconds = remainingSeconds % secondsInHour;
-                    for (let m = 1; m <= nh; m++) {
+                    for (let m = 1; m <= newHours; m++) {
                         hours++;
                     }
                 }
                 let minutes = 0;
                 if (remainingSeconds >= secondsInMinute) {
-                    let nmin = remainingSeconds / secondsInMinute;
+                    let newMinutes = remainingSeconds / secondsInMinute;
                     remainingSeconds = remainingSeconds % secondsInMinute;
-                    for (let r = 1; r <= nmin; r++) {
+                    for (let r = 1; r <= newMinutes; r++) {
                         minutes++;
                     }
                 }

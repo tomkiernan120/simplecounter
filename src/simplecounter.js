@@ -9,8 +9,8 @@ const secondsInMinute = 60;
     $.fn.extend({
         simplecounter: options => {
             let dateToday = new Date();
-            let parseDate = ms => {
-                let remainingSeconds = ms / 1000;
+            let parseDate = milliseconds => {
+                let remainingSeconds = milliseconds / 1000;
                 const years = (remainingSeconds >= secondsInYear) ? remainingSeconds / secondsInYear : 0;
                 remainingSeconds = (remainingSeconds >= secondsInYear) ? remainingSeconds % secondsInYear : remainingSeconds;
                 const months = (remainingSeconds >= secondsInMonth) ? remainingSeconds / secondsInMonth : 0;

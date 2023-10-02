@@ -5,11 +5,11 @@ const secondsInDay = 86400;
 const secondsInHour = 3600;
 const secondsInMinute = 60;
 
-(function ($) {
+($ => {
   $.fn.extend({
-    simplecounter: function (options) {
+    simplecounter: options => {
       let dateToday = new Date();
-      let parseDate = function (ms) {
+      let parseDate = ms => {
         let x = ms / 1000;
         let seconds = 0;
         let minutes = 0;
@@ -92,13 +92,13 @@ const secondsInMinute = 60;
           eventHour: 0,
           eventMinute: 0,
           eventSecond: 0,
-          complete: function () {},
+          complete: () => {},
         },
         newoptions = $.extend(defaults, options),
         o = newoptions; // can call options using "o" instead of "options";
 
-      return this.each(function () {
-        setInterval(function () {
+      return this.each(() => {
+        setInterval(() => {
           let cd = new Date();
           let ed = new Date(
             o.eventYear,
